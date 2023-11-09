@@ -17,8 +17,7 @@ CREATE TABLE animals(
    dateofbirth DATE,
    gender VARCHAR(10) NOT NULL,
    color VARCHAR(50) NOT NULL,
-   ownerid INT,foreign key (ownerid) references owners(ownerid));   
-
+   ownerid INT,foreign key (ownerid) references owners(ownerid));    
 CREATE TABLE Appointments (
     appointid INT PRIMARY KEY,
     animalid INT,
@@ -27,4 +26,11 @@ CREATE TABLE Appointments (
     FOREIGN KEY (animalid) REFERENCES Animals(animalid)
 );
 
-
+CREATE TABLE Doctors (
+    doctorid INT PRIMARY KEY,
+    dfirstname VARCHAR(50),
+    dlastname VARCHAR(50),
+    speciality VARCHAR(100),
+    phone VARCHAR(15),
+    email VARCHAR(100)
+);
